@@ -52,19 +52,12 @@
 
     a.button {
       margin: 0 0 15px 0;
+      text-transform: uppercase;
+      @include font(14px, 20px, 16px, 20px, 20px, 30px);
+      letter-spacing: 1px;
       @include media(desktop) {
         margin: 10px 0;
         float: right;
-      }
-
-      &.light {
-        background-color: darken($white, 10%);
-        color: lighten($black, 10%);
-
-        &:hover {
-          background-color: #FFF;
-          color: darken($grey, 10%)
-        }
       }
     }
   }
