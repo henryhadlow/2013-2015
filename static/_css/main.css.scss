@@ -1,191 +1,55 @@
 
-$black: #0B0C0C;
-$white: #f8f8f8;
-$grey: #454A4C;
-$lightgrey: #dfe0db;
-$red: #F15C4E;
-$pink: #FF3750;
-$yellow: #F7F960;
-$green: #00A583;
-$turquoise: #3acdb2;
-$blue: #009bdb;
-$purple: #43047c;
-
-@import "bootstrap/normalize";
-@import "mixins";
+@import "normalise";
+@import "media-query-helpers";
+@import "shims";
+@import "css3";
+@import "colours";
+@import "typography";
+@import "links";
+@import "buttons";
 @import "homepage";
-//@import "print";
+@import "default";
+// @import "print";
 
-@font-face {
-    font-family: 'edmondsansmedium';
-    src: url('fonts/edmondsans-medium-webfont.eot');
-    src: url('fonts/edmondsans-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/edmondsans-medium-webfont.woff') format('woff'),
-         url('fonts/edmondsans-medium-webfont.ttf') format('truetype'),
-         url('fonts/edmondsans-medium-webfont.svg#edmondsansmedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* --- Generic styles --- */
+// Generic styles
 
 html {
   font-size: 62.5%;
-  body {
-    background: $lightgrey;
-    // overflow-x: hidden;
-    // max-width: 100%;
-  }
 }
 
 body {
-  font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
-  // margin: 0;
-  // padding: 0;
-  font-size: 200%;
-  line-height: 1.5;
-
-  header {
-    background: $white;
-    color: $purple;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px; padding: 2rem;
-  }
+  background: $lightgrey;
 }
 
-.contained {
-  padding-left: 15px; padding-left: 1.5rem;
-  padding-right: 15px; padding-right: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  display: block;
-}
-@media (min-width: 1200px) {
-  .contained {
-    width: 1170px;
-  }
-}
-@media (min-width: 992px) {
-  .contained {
-    width: 970px;
-  }
-}
-@media (min-width: 768px) {
-  .contained {
-    width: 750px;
-  }
-}
-// img.contained {
-//   padding-left: 0;
-//   padding-right: 0;
-// }
-
-/* --- Link styles --- */
-
-a {
-  color: inherit;
-  border-bottom: 4px solid; border-bottom: 0.4rem solid;
-  display: inline;
-  text-decoration: none;
-  -moz-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  -ms-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-}
-a:hover {
-  color: $blue;
-}
-a:active {
+header {
+  background: $white;
   color: $purple;
-}
-@media (max-width: 550px) {
-  a {
-    border-bottom: 2px solid; border-bottom: 0.2rem solid;
-  }
-}
-
-a.stealth-link {
-  border-bottom: dotted;
-}
-a.no-link {
-  border-bottom: 0;
-}
-a.no-link:hover {
-  border-bottom: 4px solid; border-bottom: 0.4rem solid;
-  color: inherit;
-}
-
-/* --- Button styles --- */
-
-a.button {
-  border: 0;
-  margin: 10px 0; margin: 1rem 0;
-  padding: 0.5rem 0.8rem;
-  @include border-radius(3px);
-  -webkit-box-shadow: 0 3px 0 lighten($black, 15%);
-  -moz-box-shadow: 0 3px 0 lighten($black, 15%);
-  box-shadow: 0 3px 0 lighten($black, 15%);
-  -moz-transition: background-color 0.1s ease-in-out;
-  -ms-transition: background-color 0.1s ease-in-out;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
-}
-.button:active {
-  top: 0px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.button.right {
-  float: right;
-  display: block;
-}
-@media (max-width: 768px) {
-  .button.right {
-    clear: left;
-    float: left;
-    margin: 0 0 15px 0; margin: 0 0 1.5rem 0;
-  }
-}
-
-.button.UC {
-  font-size: 18px; font-size: 1.8rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px;
+  a { border-bottom: 0; }
 }
 
-.button.light {
-  background-color: darken($white, 10%);
-  color: lighten($black, 10%);
-}
-.button.light:hover {
-  background-color: #FFF;
-  color: darken($grey, 10%)
-}
-.button.bright {
-  background-color: darken($white, 5%);
+footer p {
+  margin-top: 10px;
+  padding: 15px 0;
+  @include font(13px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
   color: $grey;
-}
-.button.bright:hover {
-  background-color: #FFF;
-  color: darken($grey, 10%)
+  text-align: center;
 }
 
-.button.dark {
-  background-color: lighten($black, 30%);
-  color: $white;
-  letter-spacing: 1px;
-  -webkit-box-shadow: 0 3px 0 $black;
-  -moz-box-shadow: 0 3px 0 $black;
-  box-shadow: 0 3px 0 $black;
+.wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1160px;
+  @include media(tablet) {
+    padding: 0 30px;
+  }
 }
-.button.dark:hover {
-  background-color: $black;
-}
-.button.dark:active {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
