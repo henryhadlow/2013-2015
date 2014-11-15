@@ -21,18 +21,10 @@ a:active {
 .stealth-link {
   border-bottom: dotted;
 }
-.no-link {
+.no-link, a.img, a.video {
   border-bottom: 0;
   &:hover {
-    border-bottom: 4px solid;
-    color: inherit;
-  }
-}
-
-a.video, a.video img {
-  @extend .no-link;
-  :hover {
-    @extend .no-link:hover;
+    border-bottom: 0;
   }
 }
 
