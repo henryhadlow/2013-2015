@@ -21,6 +21,17 @@ body {
   background: $lightgrey;
 }
 
+::selection {
+  color: $black;
+  background: transparentize($turquoise, 0.1);
+  text-shadow: none;
+}
+::-moz-selection {
+  color: $black;
+  background: transparentize($turquoise, 0.1);
+  text-shadow: none;
+}
+
 header {
   background: $white;
   color: $purple;
