@@ -30,16 +30,6 @@ header {
   a { border-bottom: 0; }
 }
 
-footer p {
-  margin-top: 10px;
-  padding: 15px 0;
-  @include font(13px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: $grey;
-  text-align: center;
-}
-
 .wrapper {
   margin: 0 auto;
   padding: 0 15px;
@@ -52,4 +42,28 @@ footer p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+@include media(tablet) {
+  div.two-up .one,
+  div.two-up .two {
+    width: 48.5%;
+    float: left;
+  }
+  div.two-up .one {
+    clear: left;
+  }
+  div.two-up .two {
+    float: right;
+  }
+}
+
+footer p {
+  margin-top: 10px;
+  padding: 15px 0;
+  @include font(13px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $grey;
+  text-align: center;
 }
