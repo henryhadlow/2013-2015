@@ -9,8 +9,10 @@ paginate: 10
 encoding: UTF8-MAC
 
 assets:
-    dirname: static
-    baseurl: /static/
-    sources:
-        - static/_css
-        - static/_js
+  dirname: static
+  baseurl: /static/
+  sources:
+    - static/_css
+    - static/_js
+  js_compressor: uglifier
+  css_compressor: sass
