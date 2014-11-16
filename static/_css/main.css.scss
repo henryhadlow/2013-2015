@@ -9,6 +9,7 @@
 @import "buttons";
 @import "homepage";
 @import "default";
+@import "videos";
 // @import "print";
 
 // Generic styles
@@ -66,4 +67,5 @@ footer p {
   letter-spacing: 2px;
   color: $grey;
   text-align: center;
+  clear: both;
 }
