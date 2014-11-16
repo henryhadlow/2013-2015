@@ -1,11 +1,16 @@
 
-.work {
+.work.wrapper {
+
+  padding-bottom: 40px;
+
   p, h1, h2, h3, h4, h5, h6 {
     max-width: 840px;
     margin: 0 0 0 auto;
   }
+
   img {
     padding-top: 30px;
     padding-bottom: 20px;
   }
+
 }
