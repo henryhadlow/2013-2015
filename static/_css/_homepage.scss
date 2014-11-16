@@ -42,7 +42,11 @@
         @include font(20px);
   		}
   		a {
-  			@extend .no-link;
+        border-bottom: 0;
+        &:hover {
+          color: inherit;
+          border-bottom: 4px solid;
+        }
   		}
 
       @include media(desktop) {
