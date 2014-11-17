@@ -37,7 +37,7 @@ layout: home
                 <div class="wrapper">
                     <h1><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h1>
                     <a href="{{ post.url }}"" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
-                    {% if post.featured-image %}<a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)"><img src="{{ site.url }}/{{ post.featured-image }}" /></a>{% endif %}
+                    {% if post.featured-image %}<a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)"><img src="{{ site.url }}{{ post.featured-image }}" /></a>{% endif %}
                 </div>
             </article>
             {% endfor %}
