@@ -1,7 +1,6 @@
 name: "Henry Hadlow"
 description: "Henry is a designer. This is his portfolio."
 
-url: "http://localhost:4000"
 permalink: /:categories/:title
 
 paginate: 10
