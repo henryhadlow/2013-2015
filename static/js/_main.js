@@ -1,8 +1,4 @@
 
-// ...
-//= require _jquery-1.8.1.min
-//= require _jquery.unveil.min
-
 // Replace mailtos, avoid some spam
 function _mailme() {
     var at = / at /;
