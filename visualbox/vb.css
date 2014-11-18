@@ -1,0 +1,219 @@
+---
+---
+
+body {
+    background: #FFF;
+}
+
+body, input, textarea {
+	color: #333333;
+	font: 1em "HelveticaNeueW01-45Ligh", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.3125em;
+}
+blockquote, blockquote cite {
+	font-family: 'HelveticaNeueW01-46Ligh', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.wp-caption .wp-caption-text, .gallery-caption {
+	font-family: 'HelveticaNeueW01-46Ligh', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+}
+p {
+	margin-bottom: 0.625em;
+}
+.entry-title, .entry-title a {
+	clear: both;
+	color: #333;
+	font: 1.5em "HelveticaNeueW01-UltLtI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: inherit;
+	line-height: 1.2em;
+	padding-bottom: .3em;
+	padding-top: 15px;
+}
+
+#colophon {
+	border-top: 1px solid #CCCCCC;
+    position: relative;
+    top: 70px;
+    height: 50px;
+}
+
+#page {
+    margin: 0 auto;
+    width: 850px;
+}
+
+#supplementary {
+    border-top: 0px;
+    padding: 10px 0;
+}
+.lang-item {
+	padding-right: 4px;
+}
+
+#main {
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.one-column #page {
+    max-width: 850px;
+}
+
+.one-column #content, #branding hgroup, #access div {
+    margin: 0; /* was 0 7.6% */
+}
+
+#content {
+	margin: 0 35.5% 0 0;
+	width: 74.5%;
+}
+
+#secondary {
+	float: right;
+	margin-right: 0;
+	width: 19.5%;
+	background: #EEE;
+	height: 100%;
+	padding: 15px;
+	margin-top: 22px;
+	position: absolute;
+	right: 0;
+}
+
+input#s {
+	background: url(images/search.png) no-repeat 5px 6px #fff;
+}
+
+img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon img {
+	border: 0;
+	padding: 0;
+}
+
+.one-column.singular .entry-meta .edit-link a {
+    right: 0;
+    left: auto;
+}
+
+.entry-content, .entry-summary {
+    padding: 1em 0 0;
+}
+
+#branding {
+    border-top: 0;
+    border-bottom: 1px solid #CCCCCC;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#branding img {
+    margin-bottom: 0;
+    width: auto;
+}
+
+.col-first, .col-next {
+    width: 262px;
+    float: left;
+}
+.col-next {
+    padding-left: 32px;
+}
+
+#access {
+    background: none;
+    box-shadow: none;
+    clear: both;
+    display: block;
+    float: right;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: auto;
+}
+
+#access ul {
+	font: 15px 'HelveticaNeueW01-Thin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #666;
+	font-weight: normal;
+}
+
+#access a {
+    color: #666;
+    display: block;
+    line-height: inherit;
+    padding: 0;
+    padding-left: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+#access li:hover > a, #access a:focus {
+	background: none;
+	color: #FF6400;
+}
+
+#access .current-menu-item > a, #access .current-menu-ancestor > a, #access .current_page_item > a, #access .current_page_ancestor > a {
+    color: #FF6400;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: 36px 'HelveticaNeueW01-46Ligh', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	letter-spacing: 0.025em;
+}
+
+.singular .entry-title {
+	color: #333;
+}
+
+#site-title {
+    margin-right: 0;
+    padding: 0;
+}
+
+#site-title a {
+	line-height: inherit;
+}
+
+.singular.page .hentry {
+    padding: 0;
+}
+.one-column.singular .entry-meta .edit-link a, .singular .entry-meta .edit-link a {
+    top: -25px;
+    right: 0px;
+    left: auto;
+}
+
+.header-widgets li.widget, .header-widgets .widget li {
+	display: inline;
+	margin: 0;
+}
+
+.widget ul {
+	margin-left: 1em;
+	list-style-type: none;
+}
+
+#above-header .widget {
+	float: right;
+}
+
+a.widget, .widget a {
+	font-weight: inherit;
+}
+#above-header .widget {
+	clear: none;
+	margin-left: 20px;
+}
+
+#login-link {
+	text-transform: uppercase;
+	color: inherit;
+}
+
+#login-link:hover {
+	text-decoration: none;
+	color: #FF6400;
+}
