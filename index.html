@@ -33,12 +33,30 @@ layout: home
 
         <section id="work">
             {% for post in site.categories.work %}
-            <article id="{{ post.id }}" class="project" {% if post.background-color %}style="background-color: #{{ post.background-color }}; color: white;"{% endif %}>
-                <div class="wrapper">
-                    <h1><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h1>
-                    <a href="{{ post.url }}"" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
-                    {% if post.featured-image %}<a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)"><img src="{{ site.url }}{{ post.featured-image }}" /></a>{% endif %}
-                </div>
-            </article>
+                <article id="{{ post.id }}" class="project"
+                    {% if post.background-color %}
+                        style="background-color: #{{ post.background-color }}; color: white;"
+                    {% endif %}
+                >
+                    <div class="wrapper">
+                        <h1>
+                            <a href="{{ post.url }}">
+                                <span class="date">{{ post.date | date: "%Y" }}</span>
+                                {{ post.title }}
+                            </a>
+                        </h1>
+
+                        <a href="{{ post.url }}"" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
+                        {% if post.featured-image %}
+                            <a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)">
+                                <img src="{{ site.url }}/static/img/1080-trans.gif" data-src="{{ site.url }}{{ post.featured-image }}" width="1920" height="1080" />
+                                <noscript>
+                                    <img src="{{ site.url }}{{ post.featured-image }}" width="1920" height="1080" />
+                                </noscript>
+                            </a>
+                        {% endif %}
+
+                    </div>
+                </article>
             {% endfor %}
         </section>
