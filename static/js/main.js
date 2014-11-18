@@ -28,27 +28,12 @@ $(document).ready(function(){
     });
 });
 
+// Lazy-load images
 $(document).ready(function() {
-    $("img.lazy").show().unveil(1000);
+    $("img").unveil(200, function() {
+        $(this).load(function() {
+            this.style.opacity = 1;
+        });
+    });
 });
 
-
-$("a.video").hover(
-  function () {
-    $(this).addClass("hover");
-    $(this).find(".video-play-icon").addClass("hover");
-  },
-  function () {
-    $(this).removeClass("hover");
-    $(this).find(".video-play-icon").removeClass("hover");
-  }
-);
-
-$('a.video').click(function(e){
-    e.preventDefault();
-    var url = $(this).attr('href');
-    var video_id = url.match(/v=(.{11})/)[1];
-    var video = '<div class="video-wrapper"><iframe src="http://www.youtube.com/embed/'+ video_id +'?autoplay=1&hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
-    console.log(video);
-    $(this).replaceWith(video);
-});
