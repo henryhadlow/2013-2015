@@ -1,0 +1,20 @@
+{% if include.src %}
+  <img
+    src="{{ site.url }}/static/img/1080-trans.gif"
+    data-src="{{ site.url }}{{ include.src }}"
+    {% if include.alt %} alt="{{ include.alt }}"{% endif %}
+    {% if include.class %} class="{{ include.class }}"{% endif %}
+    {% if include.width %} width="{{ include.width }}"{% endif %}
+    {% if include.height %} height="{{ include.height }}"{% endif %}
+  />
+
+  <noscript>
+    <img
+      src="{{ site.url }}{{ include.src }}"
+      {% if include.alt %} alt="{{ include.alt }}"{% endif %}
+      {% if include.class %} class="{{ include.class }}"{% endif %}
+      {% if include.width %} width="{{ include.width }}"{% endif %}
+      {% if include.height %} height="{{ include.height }}"{% endif %}
+    />
+  </noscript>
+{% endif %}

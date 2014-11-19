@@ -3,42 +3,57 @@ title: Home
 layout: home
 ---
 
-        <nav id="primary-nav">
-            <ul>
-                <li id="nav-work">
-                    <a href="#work" title="The work">Work</a>
-                </li>
-                <li id="nav-about">
-                    <a href="#about" title="About Henry">About</a>
-                </li>
-                <li id="nav-contact">
-                    <a href="#contact" title="Contact Henry">Contact</a>
-                </li>
-            </ul>
-        </nav>
+<nav id="primary-nav">
+  <ul>
+    <li id="nav-work">
+      <a href="#work" title="The work">Work</a>
+    </li>
+    <li id="nav-about">
+      <a href="#about" title="About Henry">About</a>
+    </li>
+    <li id="nav-contact">
+      <a href="#contact" title="Contact Henry">Contact</a>
+    </li>
+  </ul>
+</nav>
 
-        <h1 id="splash" class="wrapper">Henry is&nbsp;a<br />designer<br />/<br />This is&nbsp;his<br />portfolio</h1>
+<h1 id="splash" class="wrapper">Henry is&nbsp;a<br />designer<br />/<br />This is&nbsp;his<br />portfolio</h1>
 
-        <section id="about">
-            <div class="wrapper">
-                <p class="intro" class="contained">
-                    {% include about.html %}
-                </p>
+<section id="about">
+  <div class="wrapper">
+    <p class="intro" class="contained">
+      {% include about.html %}
+    </p>
 
-                <p id="contact" class="contained">
-                    {% include contact.html %}
-                </p>
-            </div>
-        </section>
+    <p id="contact" class="contained">
+      {% include contact.html %}
+    </p>
+  </div>
+</section>
 
-        <section id="work">
-            {% for post in site.categories.work %}
-            <article id="{{ post.id }}" class="project" {% if post.background-color %}style="background-color: #{{ post.background-color }}; color: white;"{% endif %}>
-                <div class="wrapper">
-                    <h1><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h1>
-                    <a href="{{ post.url }}"" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
-                    {% if post.featured-image %}<a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)"><img src="{{ site.url }}{{ post.featured-image }}" /></a>{% endif %}
-                </div>
-            </article>
-            {% endfor %}
-        </section>
+<section id="work">
+  {% for post in site.categories.work %}
+    <article id="{{ post.id }}" class="project"
+        {% if post.background-color %}
+          style="background-color: #{{ post.background-color }}; color: white;"
+        {% endif %}
+      >
+    <div class="wrapper">
+      <h1>
+        <a href="{{ post.url }}">
+          <span class="date">{{ post.date | date: "%Y" }}</span>
+          {{ post.title }}
+        </a>
+      </h1>
+
+      <a href="{{ post.url }}"" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
+      {% if post.featured-image %}
+        <a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)">
+          {% include img.html src=post.featured-image width="1920" height="1080" %}
+        </a>
+      {% endif %}
+
+    </div>
+    </article>
+  {% endfor %}
+</section>

@@ -56,6 +56,15 @@ header {
 img {
   max-width: 100%;
   height: auto;
+  background-color: transparentize($lightgrey, 0.5);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  @include transition(opacity .3s ease-in);
+}
+
+noscript img {
+  opacity: 1;
 }
 
 @include media(tablet) {
