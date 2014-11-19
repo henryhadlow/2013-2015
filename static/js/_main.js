@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 // Lazy-load images
 $(document).ready(function() {
-    $("img").unveil(200, function() {
+    $("img").unveil(1000, function() {
         $(this).load(function() {
             this.style.opacity = 1;
         });
