@@ -9,3 +9,6 @@ encoding: UTF8-MAC
 
 sass:
   sass_dir: static/_scss
+  "Gruntfile.js",
+  "package.json",
+  "node_modules",
