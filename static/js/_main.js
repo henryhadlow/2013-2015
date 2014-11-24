@@ -12,21 +12,7 @@
 
 // $(document).ready(_mailme);
 
-// // Smooth scroller
-// $(document).ready(function(){
-//   $('a[href^="#"]').on('click',function (e) {
-//     e.preventDefault();
-//     var target = this.hash,
-//     $target = $(target);
-//     if (target == '#contact') { target = '#about'};
-//     console.log($target);
-//     $('html, body').stop().animate({
-//       'scrollTop': $target.offset().top
-//     }, 500, 'swing', function () {
-//       window.location.hash = target;
-//     });
-//   });
-// });
+smoothScroll.init();
 
 new Imager({
   availableWidths: [192, 960, 1152, 1920],
