@@ -3,8 +3,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     responsive_images: {
-      myTask: {
+      resizeImages: {
         options: {
           quality: 100,
           sizes: [{
@@ -24,14 +25,29 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: '**/*.{jpg,gif,png}',
-          cwd: 'test/',
-          dest: 'test/'
+          cwd: 'static/img/originals/',
+          dest: 'static/img/work/'
         }]
       }
+    },
+
+    uglify: {
+      options: {
+        preserveComments: false
+      },
+      dist: {
+        files: {
+          'static/js/main.min.js': ['static/js/_imager.js', 'static/js/_main.js']
+        }
+      }
     }
+
   })
 
   grunt.loadNpmTasks('grunt-responsive-images');
-  grunt.registerTask('default', ['responsive_images']);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  grunt.registerTask('images', ['responsive_images']);
+  grunt.registerTask('js', ['uglify']);
 
 };
