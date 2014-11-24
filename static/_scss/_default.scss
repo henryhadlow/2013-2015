@@ -9,8 +9,31 @@
   }
 
   img, .video-wrapper {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+
+    @include media(tablet) {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    @include media(desktop) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(tablet) {
+    div.two-up .one,
+    div.two-up .two {
+      width: 48.5%;
+      float: left;
+    }
+    div.two-up .one {
+      clear: left;
+    }
+    div.two-up .two {
+      float: right;
+    }
   }
 
 }
