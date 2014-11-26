@@ -9,3 +9,16 @@ encoding: UTF8-MAC
 
 sass:
   sass_dir: static/_scss
+
+exclude: [
+  "CNAME",
+  "Gemfile",
+  "Gemfile.lock",
+  "Gruntfile.js",
+  "henryhadlow.github.io.sublime-project",
+  "henryhadlow.github.io.sublime-workspace",
+  "package.json",
+  "node_modules",
+  "README.md",
+  "static/img/originals"
+]

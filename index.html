@@ -6,13 +6,13 @@ layout: home
 <nav id="primary-nav">
   <ul>
     <li id="nav-work">
-      <a href="#work" title="The work">Work</a>
+      <a data-scroll href="#work" title="The work">Work</a>
     </li>
     <li id="nav-about">
-      <a href="#about" title="About Henry">About</a>
+      <a data-scroll href="#about" title="About Henry">About</a>
     </li>
     <li id="nav-contact">
-      <a href="#contact" title="Contact Henry">Contact</a>
+      <a data-scroll href="#contact" title="Contact Henry">Contact</a>
     </li>
   </ul>
 </nav>
@@ -46,9 +46,9 @@ layout: home
         </a>
       </h1>
 
-      <a href="{{ post.url }}"" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
+      <a href="{{ post.url }}" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
       {% if post.featured-image %}
-        <a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)">
+        <a href="{{ post.url }}" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)">
           {% include img.html src=post.featured-image width="1920" height="1080" %}
         </a>
       {% endif %}
