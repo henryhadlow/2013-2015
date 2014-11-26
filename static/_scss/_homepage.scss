@@ -16,7 +16,7 @@
       padding: 30px 0;
     }
     @include media(desktop) {
-      padding: 60px 0 50px;
+      padding: 40px 0 50px;
     }
   }
 
@@ -131,15 +131,15 @@
       }
     }
     #nav-work {
-      top: 18.5rem;
+      top: 165px;
       right: 35%;
     }
     #nav-about {
-      top: 29.5rem;
+      top: 275px;
       left: 30%;
     }
     #nav-contact {
-      top: 43rem;
+      top: 410px;
       right: 30%;
     }
   }
