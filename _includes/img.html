@@ -9,7 +9,11 @@
     data-src="{{ path }}{{ filename }}-{width}.{{ ext }}"
     {% if include.alt %} data-alt="{{ include.alt }}"{% endif %}
     class="delayed-image-load{% if include.class %} {{ include.class }}{% endif %}"
+    {% comment %}
+      {% if include.width %} width="{{ include.width }}"{% endif %}
+      {% if include.height %} height="{{ include.height }}"{% endif %}
+    {% endcomment %}
     >
-  <div/>
+  </div>
 
 {% endif %}
