@@ -10,8 +10,11 @@
     {% if include.alt %} data-alt="{{ include.alt }}"{% endif %}
     class="delayed-image-load{% if include.class %} {{ include.class }}{% endif %}"
     {% comment %}
-      {% if include.width %} width="{{ include.width }}"{% endif %}
-      {% if include.height %} height="{{ include.height }}"{% endif %}
+      {% if include.width | include.height %}
+        style="
+          {% if include.width %} width: {{ include.width }}px;{% endif %}
+          {% if include.height %} height :{{ include.height }}px;{% endif %}"
+      {% endif %}
     {% endcomment %}
     >
   </div>
