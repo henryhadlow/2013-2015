@@ -65,13 +65,12 @@ a.img {
   width: 100%;
 }
 
-.delayed-image-load {
-  clear: both;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  background-color: transparentize($lightgrey, 0.5);
+.lazy-load, .lazy-loaded {
+  @include transition(opacity 0.3s);
+  opacity: 0;
 }
+
+.lazy-loaded { opacity: 1; }
 
 footer p {
   margin-top: 10px;
