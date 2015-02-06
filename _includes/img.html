@@ -5,19 +5,7 @@
   {% assign filename = splitter[0] %}
   {% assign ext = splitter[1] %}
 
-  <div
-    data-src="{{ path }}{{ filename }}-{width}.{{ ext }}"
-    {% if include.alt %} data-alt="{{ include.alt }}"{% endif %}
-    class="delayed-image-load{% if include.class %} {{ include.class }}{% endif %}"
-    {% if include.class %}data-class="{{ include.class }}"{% endif %}
-    {% if include.width %}data-width="{{ include.width }}"{% endif %}
-    {% comment %}
-      {% if include.width | include.height %}
-        style="
-          {% if include.height %} height :{{ include.height }}px;{% endif %}"
-      {% endif %}
-    {% endcomment %}
-    >
-  </div>
+  <img class="lazy-load" data-src="{{ path }}{{ filename }}-1920.{{ ext }}" data-src-mobile="{{ path }}{{ filename }}-960.{{ ext }}" src="/static/img/1080-trans.gif" />
+  <noscript><img src="{{ path }}{{ filename }}-1920.{{ ext }}" /></noscript>
 
 {% endif %}

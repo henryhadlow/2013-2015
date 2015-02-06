@@ -385,3 +385,5 @@
 	return smoothScroll;
 
 });
+
+smoothScroll.init();

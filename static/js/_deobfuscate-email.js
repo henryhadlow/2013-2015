@@ -11,10 +11,3 @@ function _mailme() {
   document.getElementById("mailme").outerHTML = mailmeReplacement;
 }
 _mailme();
-
-smoothScroll.init();
-
-new Imager({
-  availableWidths: [192, 960, 1152, 1920],
-  lazyload: true
-});
