@@ -1,11 +1,12 @@
-{% if include.src %}
-
-  {% assign path = site.url | append: '/static/img/work/' %}
-  {% assign splitter = include.src | split: '.' %}
-  {% assign filename = splitter[0] %}
-  {% assign ext = splitter[1] %}
-
-  <img class="lazy-load" data-src="{{ path }}{{ filename }}-1920.{{ ext }}" data-src-mobile="{{ path }}{{ filename }}-960.{{ ext }}" src="/static/img/1080-trans.gif" />
-  <noscript><img src="{{ path }}{{ filename }}-1920.{{ ext }}" /></noscript>
-
+{% if include.src %}{% assign path = site.url | append: '/static/img/work/' %} {% assign splitter = include.src | split: '.' %} {% assign filename = splitter[0] %} {% assign ext = splitter[1] %}
+  <img
+    class="lazy-load{% if include.class %} {{ include.class }}{% endif %}"
+    data-src="{{ path }}{{ filename }}-1920.{{ ext }}"
+    data-src-mobile="{{ path }}{{ filename }}-960.{{ ext }}"
+    src="/static/img/1080-trans.gif" />
+  <noscript>
+    <img
+      src="{{ path }}{{ filename }}-1920.{{ ext }}"
+      {% if include.class %}class="{{ include.class }}"{% endif %} />
+  </noscript>
 {% endif %}
