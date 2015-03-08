@@ -1,14 +1,15 @@
 ---
 ---
-
 @import "normalise";
 @import "media-query-helpers";
 @import "shims";
 @import "css3";
+@import "grid-layout";
 @import "colours";
 @import "typography";
 @import "links";
 @import "buttons";
+@import "lists";
 @import "homepage";
 @import "default";
 @import "videos";
@@ -22,6 +23,12 @@ html {
 
 body {
   background: $lightgrey;
+}
+
+$site-width: 1152px;
+
+.wrapper {
+  @extend %site-width-container;
 }
 
 ::selection {
@@ -42,15 +49,6 @@ header {
   text-align: center;
   padding: 20px;
   a { border-bottom: 0; }
-}
-
-.wrapper {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1152px;
-  @include media(tablet) {
-    padding: 0 30px;
-  }
 }
 
 img {
