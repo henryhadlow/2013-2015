@@ -2,6 +2,9 @@
 .home {
   .wrapper {
     max-width: 960px;
+    @include media($min-width: (960px + $gutter * 3)) {
+      margin: 0 auto;
+    }
   }
 
   // Giant text

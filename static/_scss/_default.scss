@@ -21,19 +21,4 @@
       margin-bottom: 30px;
     }
   }
-
-  @include media(tablet) {
-    div.two-up .one,
-    div.two-up .two {
-      width: 48.5%;
-      float: left;
-    }
-    div.two-up .one {
-      clear: left;
-    }
-    div.two-up .two {
-      float: right;
-    }
-  }
-
 }
