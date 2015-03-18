@@ -31,13 +31,10 @@
 <html>
     <head>
         <title>
-            {% if post.featured-image %}
-                <a href="{{ post.url }}"" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)"><img src="{{ site.url }}/{{ post.featured-image }}" /></a>
-            {% endif %}
             {% if page.title == "Home" %}
                 Henry is a designer &ndash; This is his portfolio
             {% else %}
-                {{ page.title }} - {{site.name}}
+                {{ page.title }} - {{ site.name }}
             {% endif %}
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
