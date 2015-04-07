@@ -1,0 +1,11 @@
+{% if include.youtube-key %}
+<div class="video-wrapper">
+  <iframe
+    class="lazyload"
+    frameborder="0"
+    allowfullscreen
+    {% if include.title %}title="{{ include.title }}"{% endif %}
+    data-src="//www.youtube.com/embed/{{ include.youtube-key }}?{% if include.autoplay %}autoplay=1&{% endif %}hd=1&rel=0&autohide=1&showinfo=0">
+  </iframe>
+</div>
+{% endif %}
