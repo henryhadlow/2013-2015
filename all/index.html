@@ -1,38 +1,10 @@
 ---
-title: Home
-layout: home
+title: Work
+layout: default
 ---
 
-<nav id="primary-nav">
-  <ul>
-    <li id="nav-work">
-      <a data-scroll href="#work" title="The work">Work</a>
-    </li>
-    <li id="nav-about">
-      <a data-scroll href="#about" title="About Henry">About</a>
-    </li>
-    <li id="nav-contact">
-      <a data-scroll href="#contact" title="Contact Henry">Contact</a>
-    </li>
-  </ul>
-</nav>
-
-<h1 id="splash" class="wrapper">Henry is&nbsp;a<br />designer<br />/<br />This is&nbsp;his<br />portfolio</h1>
-
-<section id="about">
-  <div class="wrapper">
-    <div class="intro">
-      {% include about.html %}
-    </div>
-
-    <div id="contact">
-      {% include contact.html %}
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  {% for post in site.categories.projects %}
+<section id="blog">
+  {% for post in site.categories.work %}
     <article id="{{ post.id }}" class="project"
         {% if post.background-color %}
           style="background-color: #{{ post.background-color }}; color: white;"
