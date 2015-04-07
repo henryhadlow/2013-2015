@@ -1,12 +1,14 @@
 {% if include.src %}{% assign path = site.url | append: '/static/img/work/' %} {% assign splitter = include.src | split: '.' %} {% assign filename = splitter[0] %} {% assign ext = splitter[1] %}
   <img
-    class="lazy-load{% if include.class %} {{ include.class }}{% endif %}"
-    data-src="{{ path }}{{ filename }}-1920.{{ ext }}"
-    data-src-mobile="{{ path }}{{ filename }}-960.{{ ext }}"
-    src="/static/img/1080-trans.gif" />
-  <noscript>
-    <img
-      src="{{ path }}{{ filename }}-1920.{{ ext }}"
-      {% if include.class %}class="{{ include.class }}"{% endif %} />
-  </noscript>
+    {% if include.class %}class="lazyload{{ include.class }}"{% else %}class="lazyload"{% endif %}
+    src="{{ path }}{{ filename }}-192.{{ ext }}"
+    data-sizes="auto"
+    data-srcset="{{ path }}{{ filename }}-1920.{{ ext }} 1920w,
+            {{ path }}{{ filename }}-1152.{{ ext }} 960w,
+            {{ path }}{{ filename }}-960.{{ ext }}  960w,
+            {{ path }}{{ filename }}-192.{{ ext }}  192w"
+    {% if include.alt %}alt="{{ include.alt }}"{% endif %}
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}
+  >
 {% endif %}

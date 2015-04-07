@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'static/js/main.min.js': ['static/js/_smooth-scroll.js', 'static/js/_lazy-load.js', 'static/js/_deobfuscate-email.js']
+          'static/js/main.min.js': ['static/js/_smooth-scroll.js', 'static/js/_lazysizes.js', 'static/js/_deobfuscate-email.js']
         }
       }
     }
