@@ -18,6 +18,9 @@ module.exports = function(grunt) {
             name: '960',
             width: 960
           },{
+            name: '480',
+            width: 480
+          },{
             name: '192',
             width: 192
           }]
