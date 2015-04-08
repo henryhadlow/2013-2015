@@ -1,7 +1,7 @@
 {% if include.src %}{% assign path = site.url | append: '/static/img/work/' %} {% assign splitter = include.src | split: '.' %} {% assign filename = splitter[0] %} {% assign ext = splitter[1] %}
   <img
     {% if include.class %}class="lazyload{{ include.class }}"{% else %}class="lazyload"{% endif %}
-    src="{{ path }}{{ filename }}-192.{{ ext }}"
+    src="{{ path }}{{ filename }}-480.{{ ext }}"
     data-sizes="auto"
     data-srcset="{{ path }}{{ filename }}-1920.{{ ext }} 1920w,
             {{ path }}{{ filename }}-1152.{{ ext }} 960w,
