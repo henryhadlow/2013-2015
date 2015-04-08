@@ -18,6 +18,9 @@ module.exports = function(grunt) {
             name: '960',
             width: 960
           },{
+            name: '480',
+            width: 480
+          },{
             name: '192',
             width: 192
           }]
@@ -37,7 +40,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'static/js/main.min.js': ['static/js/_smooth-scroll.js', 'static/js/_lazy-load.js', 'static/js/_deobfuscate-email.js']
+          'static/js/main.min.js': ['static/js/_smooth-scroll.js', 'static/js/_lazysizes.js', 'static/js/_deobfuscate-email.js']
         }
       }
     }
