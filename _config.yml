@@ -1,5 +1,6 @@
 name: "Henry Hadlow"
-description: "Henry is a designer. This is his portfolio."
+description: "Henry is a designer. This is his old portfolio."
+url: http://www.manofscience.co.uk/2013-2015
 
 permalink: /:categories/:title
 
