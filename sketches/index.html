@@ -12,15 +12,15 @@ layout: default
       >
     <div class="wrapper">
       <h1>
-        <a href="{{ post.url }}">
+        <a href="{{ site.url }}{{ post.url }}">
           <span class="date">{{ post.date | date: "%Y" }}</span>
           {{ post.title }}
         </a>
       </h1>
 
-      <a href="{{ post.url }}" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
+      <a href="{{ site.url }}{{ post.url }}" class="button" alt="Project page for {{ post.title }} (on manofscience.co.uk)">More &rarr;</a>
       {% if post.featured-image %}
-        <a href="{{ post.url }}" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)">
+        <a href="{{ site.url }}{{ post.url }}" class="img" alt="Project page for {{ post.title }} (on manofscience.co.uk)">
           {% include img.html src=post.featured-image width="1920" height="1080" %}
         </a>
       {% endif %}
